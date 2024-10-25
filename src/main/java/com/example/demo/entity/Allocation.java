@@ -14,6 +14,10 @@ public class Allocation {
 
     private Integer quantity;
 
+    // Add fields for eventId and venueId
+    private Long eventId;
+    private Long venueId;
+
     // Getters and Setters
 
     public Long getId() {
@@ -38,5 +42,22 @@ public class Allocation {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    // Getters and Setters for eventId and venueId
+    public Long getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(Long eventId) {
+        this.eventId = eventId;
+    }
+
+    public Long getVenueId() {
+        return venueId;
+    }
+
+    public void setVenueId(Long venueId) {
+        this.venueId = venueId;
     }
 }

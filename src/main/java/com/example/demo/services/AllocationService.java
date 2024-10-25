@@ -39,7 +39,8 @@ public class AllocationService {
         if (inventory.getQuantity() < allocation.getQuantity()) {
             throw new Exception("Insufficient stock. Available quantity: " + inventory.getQuantity());
         }
-
+        allocation.setEventId(allocation.getEventId());
+        allocation.setVenueId(allocation.getVenueId());
         inventory.setQuantity(inventory.getQuantity() - allocation.getQuantity());
         inventoryRepository.save(inventory);
 
